@@ -1,0 +1,57 @@
+.flashcontainer {
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+.flashcard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.flashcard div {
+    display: block;
+    border: 1px solid black;
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    line-height: 200px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flashcard .flashfront {
+  background: #7bdcf9;
+}
+.flashcard .flashback {
+    background: #26ee99;
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -o-transform: rotateX( 180deg );
+    transform: rotateX( 180deg );
+}
+.flashcard.flipped {
+    -webkit-transform: rotateX( 180deg );
+    -moz-transform: rotateX( 180deg );
+    -o-transform: rotateX( 180deg );
+    transform: rotateX( 180deg );
+}
